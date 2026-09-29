@@ -1,0 +1,4 @@
+CONTEXTO_PROYECTO.md
+*.pdf
+__pycache__/
+tests/graficos/

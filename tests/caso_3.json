@@ -1,0 +1,42 @@
+{
+  "description": "Caso 3 (mediano-grande): AFND sobre {a,b} con dos ramas no deterministas que colapsan al minimizar",
+  "alphabet": ["a", "b"],
+  "states": ["q0", "q1", "q2", "q3", "q4", "q5", "q6", "q7"],
+  "initial_state": "q0",
+  "final_states": ["q5", "q6", "q7"],
+  "transitions": {
+    "q0": {
+      "a": ["q1", "q2"],
+      "b": ["q0"]
+    },
+    "q1": {
+      "a": ["q3"],
+      "b": ["q4"]
+    },
+    "q2": {
+      "a": ["q3"],
+      "b": ["q4"]
+    },
+    "q3": {
+      "a": ["q5"],
+      "b": ["q5"]
+    },
+    "q4": {
+      "a": ["q6"],
+      "b": ["q6"]
+    },
+    "q5": {
+      "a": ["q7"],
+      "b": ["q7"]
+    },
+    "q6": {
+      "a": ["q7"],
+      "b": ["q7"]
+    },
+    "q7": {}
+  },
+  "test_strings": {
+    "accept": ["aaa", "aab", "aba", "abb", "baaa", "babb", "bbaaa"],
+    "reject": ["", "a", "b", "aa", "bb", "ba", "bbb", "bbba"]
+  }
+}
